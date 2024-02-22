@@ -1,0 +1,222 @@
+/* (*)is used to make changes to all the elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+i{
+  cursor: pointer;
+}
+
+
+/* unvisited link */
+a:link {
+  text-decoration: wavy;
+  color:antiquewhite ;
+}
+
+/* visited link */
+a:visited {
+  color: antiquewhite;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: antiquewhite;
+  text-decoration: none;
+}
+/* navigation bar*/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #212529 ;
+  color: antiquewhite;
+  padding: 25px 60px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 45px;
+}
+
+h2 {
+  animation: h2Animation 2s ease-in-out infinite;
+}
+
+h1::selection{
+  color: aqua;
+  background-color: black;
+}
+
+.cart {
+background-color:#ffafcc;
+color:#fffcf2 ;
+font-size: 30px;
+padding: 5px;
+border-radius: 5px;
+}
+.cartamount{
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  font-size: 14px;
+  background-color:#a0c4ff;
+  padding: 3px;
+  border-radius: 6px;
+}
+/* shop items styles */
+.shop{
+  display: grid;
+  grid-template-columns: repeat(4,223px);
+  gap:30px;
+  justify-content: center;
+}
+ 
+@media (max-width: 1000px) {
+  .shop {
+    display: grid;
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px);
+  }
+}
+
+
+.item {
+  border: 2px solid black; 
+  color: #f09cb8;
+  border-radius: 6px;
+  box-shadow: #212529;
+  transition: transform 0.3s ease;
+}
+.item:hover {
+  transform: scale(1.05);
+  background-color: white;
+  font-size: 110%;
+  color:#212529;
+  cursor: pointer;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+ .price-quantity{
+  display: flex;
+  flex-direction: row;
+ justify-content: space-between; 
+}
+.buttons{
+ display: flex;
+ flex-direction: row;
+ gap: 6px;
+ font-size: 16px;
+}
+.bi-dash {
+  color: rgb(254, 3, 87) ;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+}
+.bi-plus{
+  color:green ;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+}
+
+h1{
+  color: blueviolet;
+  box-shadow: 5px;
+  border: solid black;
+  border-radius: 5px;
+  font-size: 50px;
+  background-color: whitesmoke;
+}
+
+body{
+  background-color: rgb(216, 225, 255);
+}
+@keyframes h1Animation {
+  0% {
+    color: black;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+  50% {
+    color: blueviolet;
+    box-shadow: 0 0 15px;
+    border: solid black;
+    border-radius: 5px;
+  }
+  100% {
+    color: black;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+h1 {
+  animation: h1Animation 2s ease-in-out infinite;
+}
+
+h1::selection{
+  color: aqua;
+  background-color: black;
+}
+dialog {
+  opacity: 0;
+  scale: 50%;
+  display: block;
+  transition: all 1.5s;
+  position: fixed;
+  width: 90%; 
+  max-width: 300px; 
+  z-index: 9999; 
+}
+
+dialog[open] {
+  opacity: 1;
+  scale: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+  background-color: black;
+}
+
+button {
+  background-color: rgb(248, 174, 248);
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+  background-color: lightblue;
+  color: whitesmoke;
+
+}
+
